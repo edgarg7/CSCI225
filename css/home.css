@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Teko', sans-serif;
+    line-height: 1.6;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+p{
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: darkcyan;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbar ul li{
+    margin: 0 15px;
+}
+
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover{
+    color: aquamarine;
+}
+
+.Introduction{
+    padding: 20px;
+    background-color: aquamarine;
+    min-height: 300px;
+    margin-top: 60px;
+}
+
+.Introduction h1{
+    text-align: center;
+}
+
+.Introduction p{
+    float: left;
+    width: 60%;
+    margin-right: 20px;
+}
+
+.Introduction img{
+    float: right;
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+}
+
+.Assignment {
+    position: relative;
+    width: 100%;
+    background-color: rgb(100, 148, 237);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.Assignment h1{
+    text-align: center;
+}
+
+.Portfolio{
+    padding: 20px;
+    background-color: cadetblue;
+    margin-top: 20px;
+}
+
+.Portfolio h1{
+    text-align: center;
+}
+
+.schedule{
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.schedule table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.schedule table td .schedule table th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: cadetblue;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+footer p{
+    margin: 5px 0;
+}
+
+h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+ul, ol, li {
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    text-decoration: underline;
+}
