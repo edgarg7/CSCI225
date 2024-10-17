@@ -1,61 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <title>Contact Me Page</title>
+        <title>Contact Me</title>
+        <!---BootStrap framework-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pN1yT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
+
     <body>
-        <!--Embedded Video-->
-        <h2>Embedded Video</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/N2SHndL-KUQ?si=Ax1Cpa2JcM4TLLcA" allowfullscreen></iframe>
-        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="navbar navbar-expand-lg navbar-light bg-dark">
+                        <!--Put the list in this section-->
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link text-light" href="https://www.usca.edu"> USCA Main Website</a></li>
+                            <li class="nav-item"><a class="nav-link text-light" href="#assignment"> Assignment Section </a></li>
+                            <li class="nav-item"><a class="nav-link text-light" href="#contact"> Contact Information Section </a></li>
+                            <li class="nav-item"><a class="nav-link text-light" href="https://www.youtube.com"> Youtube Main Website </a></li>
+                            <li class="nav-item"><a class="nav-link text-light" href="https://www.laliga.com"> LaLiga Main Website </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <!--Feedback Form-->
-        <h2>Feedback Form</h2>
-        <form name="feedback" action="#" method="post">
-            <label for="fname">First Name:</label>
-            <input type="text" id="fname" name="fname" placeholder="anonymous" required>
-            <br><br>
+        <div class="row">
+            <div class="col">
+                <!--Embedded YouTube Video-->
+                <h1 class="d-none">Watch This Video:</h1>
 
-            <label for="lname">Last Name:</label>
-            <input type="text" id="lname" name="lname" placeholder="anonymous" required>
-            <br><br>
+            </div>
+            <div class="col">
+                <!--Feedback Form-->
+                <h1 class="d-none">Feedback Form</h1>
 
-            <label for="mail">Email:</label>
-            <input type="email" id="mail" name="mail" placeholder="name@domain.com">
-            <br><br>
+                <form name="feedback" class="mt-3" action="submit-feedback.php" method="POST">
+                    <!--First Name Input-->
+                    <div class="form-floating mb-2">
+                        <input class="form-control" type="text" id="fname" name="fname" placeholder="anonymous" required>
+                        <label for="fname">First Name</label>
+                    </div>
+                    <!--Last Name Input-->
+                    <label class="form-label" for="lname">Last Name</label>
+                    <input class="form-control" type="text" id="lname" placeholder="anonymous" required><br><br>
 
-            <label>Would you recommend this website?</label>
-            <input type="radio" id="yes" name="recommend" value="yes">
-            <label for="yes">Yes</label>
-            <input type="radio" id="no" name="recommend" value="no">
-            <label for="no">No</label>
-            <br><br>
+                    <!--Email Input-->
+                    <label for="mail">Email:</label>
+                    <input type="email" id="mail" name="mail" placeholder="name@domain.com" required><br><br>
 
-            <label for="favorite">Favorite Website:</label>
-            <select name="favorite" id="favorite">
-                <option value="google">Google</option>
-                <option value="facebook">Facebook</option>
-                <option value="twitter">Twitter</option>
-                <option value="time">Time</option>
-                <option value="youtube">Youtube</option>
-                <option value="instagram">Instagram</option>
-            </select>
-            <br><br>
+                    <!--Radio Buttons for Website Recommendation-->
+                    <p>Would you recommend this website?</p>
+                    <input type="radio" id="yes" name="recommend" value="yes" required>
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" id="no" name="recommend" value="no" required>
+                    <label for="no">No</label><br><br>
 
-            <label for="rating">Rate the website (1-10):</label>
-            <input type="range" id="rating" name="rating" min="1" max="10">
-            <br><br>
+                    <!--Select Box for Favorite Website-->
+                    <label for="favwebsite">Your Favorite Website:</label>
+                    <select id="favwebsite" name="favwebsite">
+                        <option value="google">Google</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="time">Time</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
 
-            <label for="comment">Additional Comments:</label>
-            <textarea name="comment" id="comment"></textarea>
-            <br><br>
+                    <!--Range Element for Website Rating-->
+                    <label for="rating">Rate this website (1 to 10):</label>
+                    <input type="range" id="rating" name="rating" min="1" max="10" step="1"><br><br>
 
-            <button type="submit">Submit</button>
-        </form>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+                    <!--Textarea for Additional Comments-->
+                    <label for="comment">Additional Comments:</label><br>
+                    <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Write your comments here..."></textarea><br><br>
+
+                    <!--HTML5 Features-->
+                    <!--Telephone Input-->
+                    <label for="phone">Phone Number (optional):</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890"><br><br>
+
+                    <!--Date Input-->
+                    <label for="date">When did you last visit this website?</label>
+                    <input type="date" id="date" name="date"><br><br>
+
+                    <!--Color Picker-->
+                    <label for="favcolor">Pick your favorite color:</label>
+                    <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+
+                    <!--Submit Button-->
+                    <input type="submit" value="Submit Feedback">
+                </form>
+            </div>
+        </div>
+
+    <!--Bootstrap javascript and POP-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyo16VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
     </body>
 </html>
