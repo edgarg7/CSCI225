@@ -7,8 +7,9 @@
 body{
     font-family: 'Teko', sans-serif;
     line-height: 1.8;
-    background-image: url('img/cr7.jpg');
+    background-image: url('img/Buu.jpg');
     background-size: cover;
+    background-position: center;
     padding-top: 60px;
     padding-bottom: 80px;
 }
@@ -163,13 +164,33 @@ ul, ol, li {
 }
 
 a{
+    position:relative
     text-decoration: none;
-    color: inherit;
+    color: #3498db;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3498db;
+    visibility: hidden;
+    transition:all 0.3s ease-in-out;
 }
 
 a:hover{
     text-decoration: underline;
     color: aquamarine;
+}
+
+a:hover::before{
+    visibility: visible;
+    width: 100%;
 }
 
 .Portfolio, .contact, .schedule{
