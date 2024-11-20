@@ -1,0 +1,49 @@
+.gallery-container{
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+}
+
+.gallery-image{
+    width: 100%;
+    display: none;
+}
+
+.nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    user-select: none;
+}
+
+.nav.left{
+    left: 0;
+}
+
+.nav.right{
+    right: 0;
+}
+
+.dots{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active{
+    background-color: #717171;
+}
